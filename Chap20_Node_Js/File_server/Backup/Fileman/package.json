@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/ELAMRANI744/filemanager-template#readme",
   "devDependencies": {
-    "rollup": "^2.18.2",
+    "rollup": "^2.79.2",
     "rollup-plugin-uglify": "^6.0.4",
     "autoprefixer": "^9.8.4",
     "node-sass": "^4.14.1",
