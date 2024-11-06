@@ -6,6 +6,7 @@
   ],
   "plugins": ["@typescript-eslint"],
   "rules": {
-    // Add any custom rules here
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
