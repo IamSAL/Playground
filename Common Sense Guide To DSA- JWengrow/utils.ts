@@ -1,4 +1,5 @@
-const isSameValue = (a:any, b:any) => {
+const SHOULD_LOG = false;
+const isSameValue = (a: any, b: any) => {
     if (a === b) return true;
 
     if (typeof a !== typeof b) return false;
@@ -27,10 +28,17 @@ const isSameValue = (a:any, b:any) => {
     return false;
     
 }
-export function logTestResult(description: string, result: any, expected: any) {
+export function test(description: string, result: any, expected: any) {
 
   const status = isSameValue(result,expected) ? "🟢" : "🔴";
   console.log(
     `${status}  ${description} :  (expected: ${expected}, got: ${result}) \n`
   );
+}
+
+export function log(...args) {
+    if (SHOULD_LOG) {
+         console.log(...args);
+    }
+   
 }

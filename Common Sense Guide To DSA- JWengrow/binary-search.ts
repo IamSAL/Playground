@@ -1,7 +1,8 @@
-import { logTestResult } from "./utils";
+
+import { test } from "./utils";
 
 
-function binary_search<T = any>(arr: T[], target: T): T | null{
+export function binary_search<T = any>(arr: T[], target: T): T | null{
     let lower_bound=0;
     let upper_bound = arr.length - 1;
     
@@ -26,9 +27,10 @@ function binary_search<T = any>(arr: T[], target: T): T | null{
 
 
 
-logTestResult("First element", binary_search([1, 2, 3, 4, 5], 1), 1);
-logTestResult("Last element", binary_search([1, 2, 3, 4, 5], 5), 5);
-logTestResult("Element not in array", binary_search([1, 2, 3, 4, 5], 6), null);
-logTestResult("Empty array", binary_search([], 1), null);
-logTestResult("Single element array", binary_search([1], 1), 1);
-logTestResult("Duplicate elements", binary_search([1, 1, 2, 2, 3, 3], 2), 2);
+test("First element", binary_search([1, 2, 3, 4, 5], 1), 1);
+test("Last element", binary_search([1, 2, 3, 4, 5], 5), 5);
+test("Element not in array", binary_search([1, 2, 3, 4, 5], 6), null);
+test("Empty array", binary_search([], 1), null);
+test("Single element array", binary_search([1], 1), 1);
+test("Duplicate elements", binary_search([1, 1, 2, 2, 3, 3], 2), 2);
+
