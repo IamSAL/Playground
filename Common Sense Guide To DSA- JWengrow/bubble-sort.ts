@@ -19,12 +19,12 @@ export function bubbleSort(unsorted_array: any[]) {
       }
        
     }
-    if (swapCountInCurrentStep==0) {
+    if (swapCountInCurrentStep == 0) {
       return unsorted_array;
     }
     unsorted_until_index--;
 
-    log("pass",k, unsorted_array);
+    log("pass",k, unsorted_until_index);
   }
  
   
